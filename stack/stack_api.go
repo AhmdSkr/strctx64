@@ -16,15 +16,15 @@ type Basic[T any] interface {
 	// empty, otherwise it retuns nil.
 	Pop() error
 
-	// Top sets the variable pointed to by datum equal
+	// Top sets the variable pointed to by dst equal
 	// to that stored on top of the stack.
 	//
 	// (Simply, Top peeks the value of the top element)
 	//
 	// Top returns an error if and only if the stack is
-	// empty (with no change to datum's value), otherwise
+	// empty (with no change to dst's value), otherwise
 	// it returns nil.
-	Top(datum *T) error
+	Top(dst *T) error
 }
 
 // Extended interface for stack that includes LIFO data
