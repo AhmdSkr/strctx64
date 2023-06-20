@@ -2,6 +2,8 @@ package stack
 
 import "fmt"
 
+// Creates a static stack instance satisfying the
+// [stack.Extended] interface.
 func NewStatic[T any](capacity uint64) Extended[T] {
 	return &static[T]{
 		size:      uint64(0),
