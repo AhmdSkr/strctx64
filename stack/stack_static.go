@@ -4,24 +4,24 @@ import "fmt"
 
 // Creates a static stack instance satisfying the
 // [stack.Extended] interface.
-func NewStatic[T any](capacity uint64) Extended[T] {
+func NewStatic[T any](capacity uint32) Extended[T] {
 	return &static[T]{
-		size:      uint64(0),
+		size:      uint32(0),
 		capacity:  capacity,
 		container: make([]T, capacity),
 	}
 }
 
 type static[T any] struct {
-	size      uint64
-	capacity  uint64
+	size      uint32
+	capacity  uint32
 	container []T
 }
 
 func (s *static[T]) IsEmpty() bool    { return s.size == 0 }
 func (s *static[T]) IsFull() bool     { return s.size == s.capacity }
-func (s *static[T]) Size() uint64     { return s.size }
-func (s *static[T]) Capacity() uint64 { return s.capacity }
+func (s *static[T]) Size() uint32     { return s.size }
+func (s *static[T]) Capacity() uint32 { return s.capacity }
 func (s *static[T]) Push(datum T) error {
 	if s.IsFull() {
 		return fmt.Errorf("stack is full! size = %v  have reached capacity = %v", s.Size(), s.Capacity())

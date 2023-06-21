@@ -46,9 +46,9 @@ type Extended[T any] interface {
 	// If the stack is empty then the size of the stack
 	// is 0. If the stack is full then the size of the
 	// stack equals its capacity.
-	Size() uint64
+	Size() uint32
 
 	// Capacity returns the maximum amount of elements a
 	// stack can store at once.
-	Capacity() uint64
+	Capacity() uint32
 }
