@@ -3,8 +3,8 @@ The **`structx64`** module is a collection of various implementation of useful d
 
 Our codebase includes the following implementatoins:
 1. Static **Stack**
+1. Static Circular **Queue**
 <!-- 1. Dynamic **Stack** -->
-<!-- 1. Static **Queue** -->
 <!-- 1. Dynamic **Queue** -->
 <!-- TODO: Link to implementation Go code -->
 ---
