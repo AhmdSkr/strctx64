@@ -9,7 +9,7 @@ Our codebase includes the following implementatoins:
 <!-- TODO: Link to implementation Go code -->
 ---
 # Conventions and BCPs
-We must state that our focus is on the application of Go's conventions and best practices that makes our code as efficient, readable, testable, and maintable as possible.
+Our primary focus is on the application of Go's conventions and best practices that makes our code as efficient, readable, testable, and maintable as possible.
 ## List of References
 - [Docs: Effective Go](https://go.dev/doc/effective_go)
 ### Go Memory Management
