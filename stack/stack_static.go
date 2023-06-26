@@ -41,6 +41,6 @@ func (s *static[T]) Top(datum *T) error {
 	if s.IsEmpty() {
 		return fmt.Errorf("stack is empty! %v elements are in the stack", s.Size())
 	}
-	*datum = s.container[s.size]
+	*datum = s.container[s.size-1]
 	return nil
 }
