@@ -28,13 +28,11 @@ type Basic[T any] interface {
 }
 
 // Extended interface for stack that includes LIFO data
-// operations and with additional state queries.
+// operations with additional state queries.
 type Extended[T any] interface {
-	Basic[T]
-
 	// IsEmpty returns true if the stack is empty,
 	// otherwise false.
-	IsEmpty() bool // stack can store at once.
+	IsEmpty() bool
 
 	// IsFull return true if the stack has reached its
 	// full capacity, otherwise false.
@@ -51,4 +49,6 @@ type Extended[T any] interface {
 	// Capacity returns the maximum amount of elements a
 	// stack can store at once.
 	Capacity() uint32
+
+	Basic[T]
 }
