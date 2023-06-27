@@ -26,7 +26,7 @@ func (q *circular[T]) IsEmpty() bool    { return q.size == 0 }
 func (q *circular[T]) IsFull() bool     { return q.size == q.capacity }
 func (q *circular[T]) Size() uint32     { return q.size }
 func (q *circular[T]) Capacity() uint32 { return q.capacity }
-func (q *circular[T]) EnQueue(datum T) error {
+func (q *circular[T]) Enqueue(datum T) error {
 	if q.IsFull() {
 		return fmt.Errorf("queue is full! size = %v  have reached capacity = %v", q.Size(), q.Capacity())
 	}
@@ -35,7 +35,7 @@ func (q *circular[T]) EnQueue(datum T) error {
 	q.size++
 	return nil
 }
-func (q *circular[T]) DeQueue() error {
+func (q *circular[T]) Dequeue() error {
 	if q.IsEmpty() {
 		return fmt.Errorf("queue is empty! %v elements are in the queue", q.Size())
 	}

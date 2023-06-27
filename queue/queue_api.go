@@ -10,7 +10,7 @@ type Basic[T any] interface {
 	// Enqueue returns an error if and only if
 	// the queue is full, otherwise it returns
 	// nil.
-	EnQueue(datum T) error
+	Enqueue(datum T) error
 
 	// Dequeue removes the first element from
 	// the queue.
@@ -18,7 +18,7 @@ type Basic[T any] interface {
 	// Dequeue returns an error if and only if
 	// the queue is empty, otherwise it returns
 	// nil.
-	DeQueue() error
+	Dequeue() error
 
 	// Front sets the variiable pointed to by dst
 	// equal to that stored at the front of the
@@ -52,4 +52,6 @@ type Extended[T any] interface {
 	// Capacity returns the maximum amount of elements a
 	// queue can store at once.
 	Capacity() uint32
+
+	Basic[T]
 }

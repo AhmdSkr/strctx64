@@ -16,7 +16,7 @@ func testImplementation(name string, m *testing.M, p provider) {
 	}
 	extendedProvider = p
 
-	log.Print("Running tests on", name, "implementation")
+	log.Print("Running tests on ", name, " implementation")
 	if code := m.Run(); code != 0 {
 		os.Exit(code)
 	}
